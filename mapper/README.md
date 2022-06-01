@@ -43,7 +43,7 @@ Prior to the method we indicate this label as we indicate the specific mapping o
 
 Usamos maptstruct para el cambio de valores de propiedades.
 ### Etiquetas principales:
-- `@Mapeador`
+- `@Mapper`
 Marca una interfaz o clase abstracta como mapeador y activa la generación de una implementación de ese tipo a través de MapStruct.
 	- Las principales propiedades son:
 		- `componentModel`:
@@ -55,7 +55,7 @@ Marca una interfaz o clase abstracta como mapeador y activa la generación de un
 		- `uses`:
 Otros tipos de mapeador utilizados por este mapeador. Pueden ser clases escritas a mano u otros mapeadores generados por MapStruct.
 No se debe crear ningún ciclo entre las clases de mapeador generadas.
-- `@Mapeo`
+- `@Mapping`
 Previo al método indicamos esta etiqueta como indicamos el mapeo específico de alguna propiedad.
 Las propiedades de las etiquetas más importantes son:
 	- **target**: 	el nombre de destino de la propiedad configurada según lo define la especificación JavaBeans.
