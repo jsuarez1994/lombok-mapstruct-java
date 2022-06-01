@@ -22,7 +22,6 @@ Prior to the method we indicate this label as we indicate the specific mapping o
 	-	**source**	:	The source to use for this mapping. This can either be: 
 					1.The source name of the configured property as defined by the JavaBeans specification. 
 					This may either be a simple property name (e.g. "address") or a dot-separated property path (e.g. "address.city"or "address.city.name"). In case the annotated method has several source parameters, the property name mustqualified with the parameter name, e.g. "addressParam.city".
-
 					2.When no matching property is found, MapStruct looks for a matching parameter name instead.
 					3.When used to map an enum constant, the name of the constant member is to be given.
 	-	**qualifiedByName**	: String-based form of qualifiers; When looking for a suitable mapping method for a given property, MapStruct willonly consider those methods carrying directly or indirectly (i.e. on the class-level) a Named annotationfor each of the specified qualifier names. 
