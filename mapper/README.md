@@ -58,24 +58,24 @@ No se debe crear ningún ciclo entre las clases de mapeador generadas.
 - `@Mapeo`
 Previo al método indicamos esta etiqueta como indicamos el mapeo específico de alguna propiedad.
 Las propiedades de las etiquetas más importantes son:
-- **destino**: el nombre de destino de la propiedad configurada según lo define la especificación JavaBeans.
-La misma propiedad de destino no debe asignarse más de una vez.
-- **fuente**: la fuente que se usará para esta asignación. Esto puede ser:
-1. El nombre de origen de la propiedad configurada según lo define la especificación JavaBeans.
-Puede ser un nombre de propiedad simple (por ejemplo, "dirección") o una ruta de propiedad separada por puntos (por ejemplo, "dirección.ciudad" o "dirección.ciudad.nombre"). En caso de que el método anotado tenga varios parámetros fuente, el nombre de la propiedad debe estar calificado con el nombre del parámetro, p. "direcciónParam.ciudad".
-2.Cuando no se encuentra ninguna propiedad coincidente, MapStruct busca en su lugar un nombre de parámetro coincidente.
-3. Cuando se usa para mapear una constante de enumeración, se debe dar el nombre del miembro constante.
-- **qualifiedByName** : forma de calificadores basada en cadenas; Al buscar un método de mapeo adecuado para una propiedad dada, MapStruct solo considerará aquellos métodos que lleven directa o indirectamente (es decir, en el nivel de clase) una anotación Named para cada uno de los nombres calificadores especificados.
-- **expresión** : Actualmente, Java es el único "lenguaje de expresión" admitido y las expresiones deben proporcionarse en forma de expresiones Java usando el siguiente formato: java(<EXPRESIÓN>).
-- **constantes**: una cadena constante basada en la cual se establecerá la propiedad de destino especificada.
-Cuando la propiedad de destino designada es del tipo:
-1.primitivo o en caja (por ejemplo, java.lang.Long).
-MapStruct comprueba si el primitivo se puede asignar como literal válido al tipo primitivo o en caja.
-◦Si es posible, MapStruct asigna como literal.
-◦ Si no es posible, MapStruct intentará aplicar un método de mapeo definido por el usuario.
-2.otro
-MapStruct maneja la constante como String. El valor se convertirá aplicando un método de coincidencia, un método de conversión de tipos o una conversión integrada.
-Este atributo no se puede usar junto con source(), defaultValue(), defaultExpression() o expression().
-- **dateFormat** : Una cadena de formato procesable por SimpleDateFormat si el atributo se asigna de Cadena a Fecha o viceversa. Se ignorará para todos los demás tipos de atributos y al asignar constantes de enumeración.
-- **numberFormat**: Si la propiedad especificada a través de target() debe ser ignorada por el método de mapeo generado o no.
-- **ignorar**: Si la propiedad especificada a través de target() debe ser ignorada por el método de mapeo generado o no.
+	- **target**: 	el nombre de destino de la propiedad configurada según lo define la especificación JavaBeans.
+			La misma propiedad de destino no debe asignarse más de una vez.
+	- **source**: la fuente que se usará para esta asignación. Esto puede ser:
+			1. El nombre de origen de la propiedad configurada según lo define la especificación JavaBeans.
+			Puede ser un nombre de propiedad simple (por ejemplo, "dirección") o una ruta de propiedad separada por puntos (por ejemplo, "dirección.ciudad" o "dirección.ciudad.nombre"). En caso de que el método anotado tenga varios parámetros fuente, el nombre de la propiedad debe estar calificado con el nombre del parámetro, p. "direcciónParam.ciudad".
+			2.Cuando no se encuentra ninguna propiedad coincidente, MapStruct busca en su lugar un nombre de parámetro coincidente.
+			3. Cuando se usa para mapear una constante de enumeración, se debe dar el nombre del miembro constante.
+	- **qualifiedByName** : forma de calificadores basada en cadenas; Al buscar un método de mapeo adecuado para una propiedad dada, MapStruct solo considerará aquellos métodos que lleven directa o indirectamente (es decir, en el nivel de clase) una anotación Named para cada uno de los nombres calificadores especificados.
+	- **expression** : Actualmente, Java es el único "lenguaje de expresión" admitido y las expresiones deben proporcionarse en forma de expresiones Java usando el siguiente formato: java(<EXPRESIÓN>).
+	- **constants**: una cadena constante basada en la cual se establecerá la propiedad de destino especificada.
+			Cuando la propiedad de destino designada es del tipo:
+			1.primitivo o en caja (por ejemplo, java.lang.Long).
+			MapStruct comprueba si el primitivo se puede asignar como literal válido al tipo primitivo o en caja.
+			◦Si es posible, MapStruct asigna como literal.
+			◦ Si no es posible, MapStruct intentará aplicar un método de mapeo definido por el usuario.
+			2.otro
+			MapStruct maneja la constante como String. El valor se convertirá aplicando un método de coincidencia, un método de conversión de tipos o una conversión integrada.
+			Este atributo no se puede usar junto con source(), defaultValue(), defaultExpression() o expression().
+	- **dateFormat** : Una cadena de formato procesable por SimpleDateFormat si el atributo se asigna de Cadena a Fecha o viceversa. Se ignorará para todos los demás tipos de atributos y al asignar constantes de enumeración.
+	- **numberFormat**: Si la propiedad especificada a través de target() debe ser ignorada por el método de mapeo generado o no.
+	- **ignore**: Si la propiedad especificada a través de target() debe ser ignorada por el método de mapeo generado o no.
