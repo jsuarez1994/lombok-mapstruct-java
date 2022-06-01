@@ -47,12 +47,12 @@ Usamos maptstruct para el cambio de valores de propiedades.
 Marca una interfaz o clase abstracta como mapeador y activa la generación de una implementación de ese tipo a través de MapStruct.
 	- Las principales propiedades son:
 		- `componentModel`:
-		Especifica el modelo de componente al que debe adherirse el asignador generado. Los valores admitidos son
-		- *default*: el mapeador no usa un modelo de componente, las instancias normalmente se recuperan a través de Mappers.getMapper(Class)
-		- *cdi*: el asignador generado es un bean CDI con ámbito de aplicación y se puede recuperar a través de @Inject
-		- *spring*: el asignador generado es un bean Spring y se puede recuperar a través de @Autowired
-		- *jsr330*: el asignador generado se anota con @javax.inject.Named y @Singleton, y se puede recuperar a través de @Inject
-		- `usos`:
+			Especifica el modelo de componente al que debe adherirse el asignador generado. Los valores admitidos son
+			- *default*: el mapeador no usa un modelo de componente, las instancias normalmente se recuperan a través de Mappers.getMapper(Class)
+			- *cdi*: el asignador generado es un bean CDI con ámbito de aplicación y se puede recuperar a través de @Inject
+			- *spring*: el asignador generado es un bean Spring y se puede recuperar a través de @Autowired
+			- *jsr330*: el asignador generado se anota con @javax.inject.Named y @Singleton, y se puede recuperar a través de @Inject
+		- `uses`:
 Otros tipos de mapeador utilizados por este mapeador. Pueden ser clases escritas a mano u otros mapeadores generados por MapStruct.
 No se debe crear ningún ciclo entre las clases de mapeador generadas.
 - `@Mapeo`
