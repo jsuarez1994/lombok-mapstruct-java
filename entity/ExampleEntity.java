@@ -2,7 +2,7 @@ package entity;
 
 import java.util.List;
 
-import es.santander.ucrapl.ucrmonogrucr.dto.QuestionDTO;
+import entity.QuestionEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,7 +33,7 @@ public class ExampleEntity {
 	private Boolean status;
 
 	/** the questionsList */
-	private List<QuestionDTO> questionsList;
+	private List<QuestionEntity> questionsList;
 	
 	/** the userCreate */
 	private String userCreate;
