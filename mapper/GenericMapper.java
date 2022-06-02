@@ -1,4 +1,4 @@
-package es.santander.ucrapl.ucrmonogrucr.map;
+package mapper;
 
 import java.util.List;
 
