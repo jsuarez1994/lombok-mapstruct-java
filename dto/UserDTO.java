@@ -2,7 +2,6 @@ package dto;
 
 import java.util.List;
 
-import es.santander.ucrapl.ucrmonogrucr.dto.QuestionDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
