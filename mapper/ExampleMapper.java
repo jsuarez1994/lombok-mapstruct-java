@@ -5,8 +5,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
-import es.santander.ucrapl.ucrdtogrucr.dto.dtographicDTO;
-import es.santander.ucrapl.ucrdtogrucr.front.dtographicFront;
+import dto.ExampleDTO;
+import entity.ExampleEntity;
 
 /**
  * Mapper for the front model {@link ExampleEntity} and its DTO
